@@ -1,0 +1,10 @@
+{
+  "name": "Maya - Female AI Voice Assistant & Browser Navigator",
+  "description": "Human-like female AI voice assistant with realistic speech, long-term memory, multilingual conversation (English, Hindi, Bengali), and web browser navigation.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

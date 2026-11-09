@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SAGE – Browser Access</title>
+  <style>
+    body { margin: 0; padding: 20px; font-family: -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; background: #0f172a; color: #f8fafc; font-size: 13px; line-height: 1.45; }
+    h1 { font-size: 16px; margin: 0 0 10px; }
+    .item { background: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 10px 12px; margin-bottom: 10px; }
+    .item b { display: block; margin-bottom: 3px; }
+    .muted { color: #94a3b8; font-size: 12px; }
+    .never { color: #fda4af; }
+    button { background: #7c3aed; color: #fff; border: 0; border-radius: 6px; padding: 9px 14px; font-size: 13px; font-weight: 600; cursor: pointer; margin-right: 6px; }
+    button.secondary { background: #334155; }
+    #result { margin-top: 12px; font-weight: 600; }
+    .ok { color: #34d399; } .no { color: #fb7185; }
+  </style>
+</head>
+<body>
+  <h1 id="title">Enable Browser Access</h1>
+  <div id="explain"></div>
+  <div class="item never">
+    <b>SAGE never</b>
+    reads passwords, cookies or hidden form fields, signs in for you, or buys, sends or deletes anything without asking you first.
+  </div>
+  <button id="grant">Grant access</button>
+  <button id="close" class="secondary">Not now</button>
+  <div id="result"></div>
+  <div class="muted" style="margin-top:12px">You can remove these permissions at any time in chrome://extensions → SAGE → Details.</div>
+  <script src="permissions.js"></script>
+</body>
+</html>

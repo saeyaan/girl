@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SAGE Browser Assistant</title>
+  <style>
+    body {
+      width: 320px;
+      margin: 0;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .orb {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #c084fc, #6366f1);
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.6);
+      animation: pulse 2s infinite ease-in-out;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.9; }
+      50% { transform: scale(1.1); opacity: 1; }
+    }
+    .title {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -0.2px;
+    }
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      color: #34d399;
+      background: rgba(52, 211, 153, 0.1);
+      border: 1px solid rgba(52, 211, 153, 0.2);
+      padding: 3px 8px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #34d399;
+    }
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 12px;
+      font-size: 12px;
+    }
+    .card-label {
+      color: #94a3b8;
+      margin-bottom: 4px;
+      font-size: 11px;
+    }
+    .card-val {
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .btn-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    button {
+      background: #3b82f6;
+      color: white;
+      border: none;
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    button:hover {
+      background: #2563eb;
+    }
+    button.secondary {
+      background: #334155;
+      color: #e2e8f0;
+    }
+    button.secondary:hover {
+      background: #475569;
+    }
+    .status-badge.off {
+      color: #fda4af;
+      background: rgba(244, 63, 94, 0.1);
+      border-color: rgba(244, 63, 94, 0.25);
+    }
+    .status-badge.off .status-dot {
+      background: #fb7185;
+    }
+    .toggle {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 12px;
+      line-height: 1.35;
+      cursor: pointer;
+    }
+    .toggle input {
+      margin-top: 2px;
+    }
+    .hint {
+      color: #94a3b8;
+      font-size: 11px;
+      margin-top: 4px;
+    }
+    .perm-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 3px 0; }
+    .perm-row .granted { color: #34d399; }
+    button.small { padding: 3px 8px; font-size: 11px; }
+    .footer {
+      text-align: center;
+      font-size: 11px;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="orb"></div>
+    <div class="title">SAGE Browser Assistant</div>
+  </div>
+
+  <div class="status-badge off" id="bridge-status">
+    <span class="status-dot"></span> <span id="bridge-text">Checking connection…</span>
+  </div>
+
+  <div class="card">
+    <div class="card-label">SAGE IS WORKING IN</div>
+    <div class="card-val" id="active-tab-title">Detecting tab…</div>
+  </div>
+
+  <div class="btn-grid">
+    <button id="btn-open-sage">Open SAGE App</button>
+    <button id="btn-refresh" class="secondary">Refresh</button>
+  </div>
+
+  <div class="card">
+    <div class="card-label">PERMISSIONS</div>
+    <div id="perm-list"></div>
+  </div>
+
+  <div class="footer">
+    Keep the SAGE app in its own window for the best voice experience.
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

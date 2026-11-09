@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "SAGE - AI Browser Assistant",
+  "version": "3.0.0",
+  "minimum_chrome_version": "116",
+  "description": "Lets the SAGE voice assistant see your current tab, search, open results and control videos, with every action verified.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzXEMxeolbLCifKe9x0P88pIfm1l6jap1zq8I2Y3br8lmR35qzRwKV74Kuzdaq9+WOv+1HeQ0ieFtqsWW3lQ1Cnjbth4Gm67EmtG0Hr01wmT4zZAznHHuzG4N9Z4UXfTcYolxAffvka8wPah2lkSB0v5tTIKVh5mP7WhMZ8YeiO4iIhE7t0jdDwtGQDUa0IfaJrir5YSFe2ZL5EdP8/Te+sf+bqa9qYFUZhLsetEA+Px4fXAwOYV4ObMQAuo3zTqF+daBQvLOuPsay9t3CKyvGL/Bu7V77v/oAcOVDjl8lC+3XPUzEDuuKZkMnCD8rHDRgH0KQAOZSoKeK/IASAmZQwIDAQAB",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "optional_permissions": [
+    "debugger"
+  ],
+  "optional_host_permissions": [
+    "http://*/*",
+    "https://*/*",
+    "<all_urls>"
+  ],
+  "host_permissions": [
+    "http://localhost:*/*",
+    "http://127.0.0.1:*/*"
+  ],
+  "externally_connectable": {
+    "matches": [
+      "http://localhost:*/*",
+      "http://127.0.0.1:*/*"
+    ]
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SAGE Browser Assistant"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://localhost:*/*",
+        "http://127.0.0.1:*/*"
+      ],
+      "js": [
+        "announce.js"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}

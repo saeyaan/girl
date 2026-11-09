@@ -1,0 +1,121 @@
+[
+  {
+    "id": "mem-1794170159071-dr8u0",
+    "category": "preference",
+    "key": "languages",
+    "value": "English, Hindi, Bengali",
+    "confidence": 0.95,
+    "timestamp": 1794170159071,
+    "tags": []
+  },
+  {
+    "id": "mem-1794170159069-iq6tk",
+    "category": "profile",
+    "key": "name",
+    "value": "साएन",
+    "confidence": 0.95,
+    "timestamp": 1794222776772,
+    "tags": []
+  },
+  {
+    "id": "mem-1794170103611-9pvx5",
+    "category": "profile",
+    "key": "user_name",
+    "value": "शायद",
+    "confidence": 0.95,
+    "timestamp": 1794222675288,
+    "tags": []
+  },
+  {
+    "id": "mem-1794170101243-ky06r",
+    "category": "profile",
+    "key": "User Name",
+    "value": "sayan",
+    "confidence": 1,
+    "timestamp": 1794170118721,
+    "tags": [
+      "profile",
+      "direct-intent"
+    ]
+  },
+  {
+    "id": "seed-profile-1",
+    "category": "profile",
+    "key": "Assistant Persona",
+    "value": "Maya is a warm, empathetic, and witty female AI companion and browser navigator.",
+    "confidence": 1,
+    "timestamp": 1793904496008,
+    "tags": [
+      "persona",
+      "identity",
+      "maya"
+    ]
+  },
+  {
+    "id": "seed-profile-2",
+    "category": "profile",
+    "key": "User Interests",
+    "value": "Enjoys software engineering, modern web applications, AI research, and space exploration.",
+    "confidence": 0.95,
+    "timestamp": 1793990896008,
+    "tags": [
+      "interests",
+      "tech",
+      "ai",
+      "space"
+    ]
+  },
+  {
+    "id": "seed-pref-1",
+    "category": "preference",
+    "key": "Voice & Interaction Style",
+    "value": "Prefers natural conversational pacing with thoughtful explanations and clear answers.",
+    "confidence": 0.9,
+    "timestamp": 1793990896008,
+    "tags": [
+      "voice",
+      "preference",
+      "pace"
+    ]
+  },
+  {
+    "id": "seed-pref-2",
+    "category": "preference",
+    "key": "Browser Habits",
+    "value": "Frequently navigates to YouTube, GitHub, Google, and tech documentation.",
+    "confidence": 0.85,
+    "timestamp": 1794077296008,
+    "tags": [
+      "browser",
+      "navigation",
+      "github",
+      "youtube"
+    ]
+  },
+  {
+    "id": "seed-task-1",
+    "category": "task",
+    "key": "Current Project",
+    "value": "Exploring human-like voice interfaces and browser automation tools.",
+    "confidence": 0.9,
+    "timestamp": 1794145696008,
+    "tags": [
+      "project",
+      "voice-assistant",
+      "automation"
+    ]
+  },
+  {
+    "id": "seed-episodic-1",
+    "category": "episodic",
+    "key": "Previous Session Summary",
+    "value": "User discussed setting up multi-language voice support for English, Hindi, and Bengali.",
+    "confidence": 0.95,
+    "timestamp": 1794156496008,
+    "tags": [
+      "summary",
+      "session",
+      "multilingual"
+    ]
+  }
+]
